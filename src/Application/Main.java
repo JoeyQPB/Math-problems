@@ -1,8 +1,6 @@
 package Application;
-
 import java.util.Scanner;
-import Calculator.*;
-
+import Calculator.ResolveProblems;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -27,7 +25,6 @@ public class Main {
     }
 
     public static double calculate() {
-        ResolveProblems resolveProblems = new ResolveProblems();
         Scanner sc = new Scanner(System.in);
         double problemAnswer;
 
@@ -51,7 +48,7 @@ public class Main {
                 System.out.print("Enter C value: ");
                 double c = Double.parseDouble(sc.nextLine());
 
-                problemAnswer = resolveProblems.deltaBhaskara(a, b, c);
+                problemAnswer = ResolveProblems.deltaBhaskara(a, b, c);
             }
             case 2 -> {
                 System.out.print("Enter triangle base: ");
@@ -60,7 +57,7 @@ public class Main {
                 System.out.print("Enter triangle height: ");
                 double height = Double.parseDouble(sc.nextLine());
 
-                problemAnswer = resolveProblems.triangleRectangleArea(base, height);
+                problemAnswer = ResolveProblems.triangleRectangleArea(base, height);
             }
             case 3 -> {
                 System.out.print("Enter trapeze height: ");
@@ -72,12 +69,12 @@ public class Main {
                 System.out.print("Enter minor base: ");
                 double minorBase = Double.parseDouble(sc.nextLine());
 
-                problemAnswer = resolveProblems.trapezeArea(height, bigBase, minorBase);
+                problemAnswer = ResolveProblems.trapezeArea(height, bigBase, minorBase);
             }
             case 4 -> {
                 System.out.print("Enter position of Fibonacci sequence: ");
                 int position = Integer.parseInt(sc.nextLine());
-                problemAnswer = resolveProblems.fibonacci(position);
+                problemAnswer = ResolveProblems.fibonacci(position);
             }
             case 5 -> {
                 System.out.print("Enter the length of the array: ");
@@ -86,7 +83,7 @@ public class Main {
                 System.out.print("Enter the number you would like to find: ");
                 int number = Integer.parseInt(sc.nextLine());
 
-                problemAnswer = resolveProblems.binarySearch(arrayLength, number);
+                problemAnswer = ResolveProblems.binarySearch(arrayLength, number);
             }
             default -> {
                 System.out.println("Invalid option.");

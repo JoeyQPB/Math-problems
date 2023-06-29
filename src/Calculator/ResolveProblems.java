@@ -1,16 +1,16 @@
 package Calculator;
 public class ResolveProblems {
-    public double deltaBhaskara(double a, double b, double c) {
+    public static double deltaBhaskara(double a, double b, double c) {
         double deltaSqrt = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
         return ((b + deltaSqrt) / 2*a) + ((b - deltaSqrt) / 2*a);
     }
-    public double triangleRectangleArea(double base, double height) {
+    public static double triangleRectangleArea(double base, double height) {
         return (base * height) / 2;
     }
-    public double trapezeArea(double height, double bigBase, double minorBase) {
+    public static double trapezeArea(double height, double bigBase, double minorBase) {
         return ((bigBase + minorBase) * height) / 2;
     }
-    public double fibonacci(int position) {
+    public static double fibonacci(int position) {
         if(position == 0 || position == 1) return position;
         return fibonacci(position - 1) + fibonacci(position - 2);
         /*
@@ -24,7 +24,7 @@ public class ResolveProblems {
         return a
         */
     }
-    public double binarySearch(int arrayLength, int number) {
+    public static double binarySearch(int arrayLength, int number) {
         int[] arr = new int[arrayLength];
         int start = 0, end = arrayLength - 1, middle, find = 0, count = 0;
 
