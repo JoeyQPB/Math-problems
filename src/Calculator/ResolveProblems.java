@@ -1,3 +1,4 @@
+package Calculator;
 public class ResolveProblems {
     public double deltaBhaskara(double a, double b, double c) {
         double deltaSqrt = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
